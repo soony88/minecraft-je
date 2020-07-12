@@ -1,0 +1,14 @@
+version: "3.6"
+services:
+  minecraft:
+    container_name: minercraft
+    image: itzg/minecraft-server
+    restart: unless-stopped
+    environment:
+      - TZ=${TZ}
+      - ENABLE_AUTOPAUSE=${ENABLE_AUTOPAUSE}
+      - EULA=${EULA}
+    volumes:
+      - ${DATA_PATH}:/data # Mount Minecraft game data to host directory
+    ports:
+      - 25565:25565
