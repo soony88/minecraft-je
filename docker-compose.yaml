@@ -8,6 +8,8 @@ services:
       - TZ=${TZ}
       - ENABLE_AUTOPAUSE=${ENABLE_AUTOPAUSE}
       - EULA=${EULA}
+      - MEMORY=${MEMORY}
+      - SEED=${SEED}
     volumes:
       - ${DATA_PATH}:/data # Mount Minecraft game data to host directory
     ports:
